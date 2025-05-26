@@ -1,7 +1,6 @@
-from django.shortcuts import HttpResponse, render 
+from django.shortcuts import HttpResponse
 
-
-def listar (request):
-    return render(request, 'aluno/listarAluno.html')
-    
-    return HttpResponse("Olá! Eu sou o index.")
+# Create your views here.
+def index(request):
+    t_html = '<!DOCTYPE html><html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Escola</title></head><body><p>Esta é a página inicial do App Aluno</p></body></html>'
+    return HttpResponse(t_html)

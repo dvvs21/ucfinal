@@ -1,6 +1,6 @@
-from django.urls import path 
-from . import views
+from django.urls import path
+from . import views 
 
-urlpatterns = [ 
-    path("", views.utilitarios, name="utilitarios"),
-    ]
+urlpatterns = [
+    path('', views.index, name="utilitarios"),
+]
