@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-la9=4l!!b4*&#=cm6vptu91i%#_h95xwf$y&o68_#g(u72piw_'
+SECRET_KEY = 'django-insecure-ez(%_v__32@j)*3=3gj_=8)bgmzk_+utl=zt7&h%e_ryr@vqjr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tiposdeatividade.apps.TiposDeAtividadeConfig',
+    'tiposdeatividade.apps.TiposdeatividadeConfig',
     'aluno.apps.AlunoConfig',
     'instrutor.apps.InstrutorConfig',
     'titulo.apps.TituloConfig',
@@ -62,7 +62,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR, 'templates'
+            BASE_DIR / 'templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,10 +124,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_DIRS = [
-    BASE_DIR / STATIC_URL, 
+STATICFILES_DIRS = [
+    BASE_DIR / STATIC_URL,
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

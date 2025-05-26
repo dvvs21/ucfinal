@@ -1,5 +1,7 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, render 
 
 
-def aluno (request):
+def listar (request):
+    return render(request, 'aluno/listarAluno.html')
+    
     return HttpResponse("Olá! Eu sou o index.")
