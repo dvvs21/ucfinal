@@ -26,10 +26,11 @@ urlpatterns = [
 
     path('tiposdeatividade/', include("tiposdeatividade.urls") ),
     path('aluno/', include("aluno.urls", namespace='aluno') ),
+    path('aluno/', include("aluno.urls", namespace='cadastrar') ),
     path('instrutor/', include("instrutor.urls") ),
-    path('titulo/', include("titulo.urls") ),
+    path('titulo/', include("titulo.urls", namespace='titulo') ),
     path('turma/', include("turma.urls") ),
-    path('utilitarios/', include("utilitarios.urls") ),
+    path('utilitarios/', include("utilitarios.urls")),
 ]
 
 #urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
