@@ -24,13 +24,13 @@ urlpatterns = [
 
     path('', TemplateView.as_view(template_name='escola.html')),
 
-    path('tiposdeatividade/', include("tiposdeatividade.urls") ),
+    path('tiposdeatividade/', include("tiposdeatividade.urls", namespace='tiposdeatividade') ),
     path('aluno/', include("aluno.urls", namespace='aluno') ),
     path('aluno/', include("aluno.urls", namespace='cadastrar') ),
-    path('instrutor/', include("instrutor.urls") ),
+    path('instrutor/', include("instrutor.urls", namespace='instrutor') ),
     path('titulo/', include("titulo.urls", namespace='titulo') ),
-    path('turma/', include("turma.urls") ),
-    path('utilitarios/', include("utilitarios.urls")),
+    path('turma/', include("turma.urls", namespace='turma') ),
+    path('contato/', include("contato.urls", namespace='contato') ),
 ]
 
 #urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

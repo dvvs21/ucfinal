@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'titulo.apps.TituloConfig',
     'turma.apps.TurmaConfig',
     'utilitarios.apps.UtilitariosConfig',
+    'contato.apps.ContatoConfig'
 ]
 
 MIDDLEWARE = [

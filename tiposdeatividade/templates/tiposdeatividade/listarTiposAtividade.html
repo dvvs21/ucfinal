@@ -2,28 +2,27 @@
 
 
 {% block title %}
-    <title>Tiulos</title>
+    <title>Tipos de Atividade</title>
 {% endblock %}
+
+<body>
 
 {% block menu %}
-    <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
-        <div class="navbar-nav">
-            <a href="/" class="nav-link">Início</a>
-            <a href="{% url 'titulo:listar' %}" class="nav-link">Listar</a>
-            <a href="{% url 'titulo:cadastrar' %}" class="nav-link">Cadastrar</a>
-            <a href="{% url 'contato:contato' %}" class="nav-link">Contato</a>
-        </div>
-    </div>
+            <!-- menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+                <div class="navbar-nav">
+                    <a href="/" class="nav-link">Início</a>
+                    <a href="{% url 'tiposdeatividade:cadastrar' %}" class="nav-link">Cadastrar</a>
+                </div>
+            </div>
 {% endblock %}
 
-
 {% block corpo %}
+    <main class="container m-2 mx-auto my-font-family">
 
-<main class="container m-2 mx-auto my-font-family">
-
-       <div class="row">
+        <div class="row">
             <div class="col text-center m-0">
-                <h2 class="mt-2 mb-5 my-h2">Listar Titulos</h2>
+                <h2 class="mt-2 mb-5 my-h2">Lista de Tipos de Atividade</h2>
             </div>
         </div>
 
@@ -54,20 +53,27 @@
                 <!-- linhas -->
                 <tr>
                     <td> 1 </td>
-                    <td> Professor Doutor </td>
+                    <td> Programador Web </td>
                 </tr>
                 <tr>
                     <td> 2 </td>
-                    <td> Professor Sabe-Tudo </td>
+                    <td> Técnico em Informática </td>
                 </tr>
                 <tr>
                     <td> 3 </td>
-                    <td> Professor Estagiário </td>
+                    <td> Web Designer </td>
                 </tr>
-
+                <tr>
+                    <td> 4 </td>
+                    <td> Educação Física </td>
+                </tr>
             </table>
 
         </div>
 
     </main>
 {% endblock %}
+
+</body>
+
+</html>
