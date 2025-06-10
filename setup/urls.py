@@ -31,6 +31,7 @@ urlpatterns = [
     path('titulo/', include("titulo.urls", namespace='titulo') ),
     path('turma/', include("turma.urls", namespace='turma') ),
     path('contato/', include("contato.urls", namespace='contato') ),
+    path('utilitarios/', include("utilitarios.urls", namespace='utilitarios') ),
 ]
 
 #urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
