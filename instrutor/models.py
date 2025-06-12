@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils import timezone
-
 from titulo.models import titulo
 
 # Create your models here.
