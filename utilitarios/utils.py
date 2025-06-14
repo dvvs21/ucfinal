@@ -89,7 +89,7 @@ def popular_instrutor():
     titulos = titulo.objects.get(pk=codigo_selecionado)  
 
     for i in range(1, 20):
-        lista_instrutores.append(instrutor(nome='Instrutor ' + f'{i:02}', dtnascimento = gerar_data_aleatoria('inicial'),rg = gerar_rg_aleatorio('inicial'), telefone = f'{gerar_numero_aleatorio_faixa(1, 999999999):09}', ddd = f'{gerar_numero_aleatorio_faixa(1, 99):03}', codigo_titulo = titulo.codigo))     
+        lista_instrutores.append(instrutor(nome='Instrutor ' + f'{i:02}', dtnascimento = gerar_data_aleatoria('inicial'),rg = gerar_rg_aleatorio('inicial'), telefone = f'{gerar_numero_aleatorio_faixa(1, 999999999):09}', ddd = f'{gerar_numero_aleatorio_faixa(1, 99):03}', codigo_titulo=titulos))     
     instrutor.objects.bulk_create(lista_instrutores)
 
 def popular_turma():

@@ -28,8 +28,8 @@
         </div>
 
         <!-- formulario HTML -->
-        <form name="frmCadastrarInstrutor" action="#" method="post" class="my-label-color-purple">
-
+        <form name="frmCadastrarInstrutor" action="{% url 'instrutor:cadastro' %}" method="POST" class="my-label-color-purple">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="idNomeInstrutor" class="col-form-label">Nome do Instrutor</label>
                 <input class="form-control" type="text" id="idNomeInstrutor" name="nome"

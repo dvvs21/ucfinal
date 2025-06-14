@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from titulo.models import titulo
-from titulo.forms import TituloForm
+from titulo.forms import TituloForm, TituloAtualizarForm
 from instrutor.models import instrutor  
 # Create your views here.
 def listar(request):
@@ -31,4 +31,32 @@ def exclui(request, codigo):
     # if not instrutores:
     Titulo.delete()
 
+    return redirect('titulo:listar')
+
+
+#carregar o título para edição/atualização
+def carregar_titulo(request, codigo):
+    Titulo = titulo.objects.get(pk=codigo)
+    contexto = {
+        'titulo': Titulo,
+        
+    }
+    
+    return render (request, 'titulo/atualizarTitulo.html', context=contexto)
+    
+    
+#atualizar a base de dados para o título selecionado
+
+def atualizar_titulo (request):
+    if request.method == 'POST':
+        form = TituloAtualizarForm(request.POST)
+        if form.is_valid():
+            dados_titulo = form.cleaned_data
+            codigo = dados_titulo['codigo']
+            Titulo = titulo.objects.get(pk=codigo)
+            Titulo.descricao = dados_titulo['descricao']
+            Titulo.save()
+            
+        else: 
+            print (form.errors)
     return redirect('titulo:listar')
